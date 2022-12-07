@@ -7,7 +7,7 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
-app.config['MONGO_URI'] = 'mongodb+srv://test:test@cluster0.zc1oawr.mongodb.net/my_db?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'mongodb+srv://jivitesh:test@cluster0.vxvtkue.mongodb.net/my_db?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 Collection_1 = mongo.db.Collection_1
