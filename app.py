@@ -32,6 +32,7 @@ def predict():
     print(features_arr)
     #newdb.insert_one(d)
     print("features is :",features)
+    default_payment=prediction.tolist()
     New_database={'Gender':features[0],
                  'Education':features[1],
                  'Marrital Status':features[2],
@@ -54,7 +55,8 @@ def predict():
                  'PAY_AMT3':features [19],
                  'PAY_AMT4':features[20],
                  'PAY_AMT5':features[21],
-                 'PAY_AMT6':features[22],}
+                 'PAY_AMT6':features[22],
+                 'Prediction':default_payment[0]}
     Collection_1.insert_one(New_database)
    
     print("prediction value: ", prediction)
